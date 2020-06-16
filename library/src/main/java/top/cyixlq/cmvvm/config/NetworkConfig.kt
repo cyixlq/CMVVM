@@ -5,7 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.CallAdapter
 import retrofit2.Converter
 
-data class NetWorkConfig(
+data class NetworkConfig(
     var logLevel: HttpLoggingInterceptor.Level = HttpLoggingInterceptor.Level.BASIC,
     var readTimeOut: Long = 10000,
     var connectTimeOut: Long = 10000,

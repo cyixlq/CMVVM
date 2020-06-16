@@ -1,20 +1,20 @@
 package top.cyixlq.cmvvm.bean
 
 import top.cyixlq.cmvvm.config.LoggerConfig
-import top.cyixlq.cmvvm.config.NetWorkConfig
+import top.cyixlq.cmvvm.config.NetworkConfig
 
 class CMVVMWrapper {
 
-    private var networkConfig: NetWorkConfig = NetWorkConfig()
+    private var networkConfig: NetworkConfig = NetworkConfig()
     private var loggerConfig: LoggerConfig = LoggerConfig()
 
-    fun networkConfig(init: NetWorkConfig.() -> Unit) {
-        val config = NetWorkConfig()
+    fun networkConfig(init: NetworkConfig.() -> Unit) {
+        val config = NetworkConfig()
         config.init()
         this.networkConfig = config
     }
 
-    fun getNetworkConfig(): NetWorkConfig {
+    fun getNetworkConfig(): NetworkConfig {
         return this.networkConfig
     }
 
