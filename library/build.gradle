@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion BuildVersions.compileSdkVersion
+    buildToolsVersion BuildVersions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion BuildVersions.minSdkVersion
+        targetSdkVersion BuildVersions.targetSdkVersion
+        versionCode BuildVersions.versionCode
+        versionName BuildVersions.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api Dependencies.kotlinLibrary
+    api Dependencies.appcompat
+    api Dependencies.androidKtx
+    api Dependencies.rxJava
+    api Dependencies.rxKotlin
+    api Dependencies.rxAndroid
+    api Dependencies.loggingInterceptor
+    api Dependencies.logger
+    api Dependencies.retrofit
+    api Dependencies.rxJava2Adapter
+    api Dependencies.gsonConvert
+    api Dependencies.autoDispose
+    api Dependencies.autoDisposeLifecycle
+}
